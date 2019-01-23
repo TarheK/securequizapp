@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>{% block title %}{% endblock %} - Super Ancient Sand</title>
+</head>
+
+<body>
+
+<div id="content">{% block content %}{% endblock %}</div>
+
+<div id="footer">
+
+ {% if 'firstName' in session %} 
+   First Name: {{ session['firstName'] }}<br>
+ {% endif %}
+
+ {% if 'lastName' in session %} 
+   Last Name: {{ session['lastName'] }}<br>
+ {% endif %}
+
+ {% if 'favoriteColor' in session %} 
+   Favorite Color: {{ session['favoriteColor'] }}<br>
+ {% endif %}
+
+ <a href="/startOver">Start over</a>
+
+</div>
+
+</body>
+
+</html>
