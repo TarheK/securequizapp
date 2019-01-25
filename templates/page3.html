@@ -1,15 +1,14 @@
 {% extends "layout.html" %}
 
-{% block title %}Page 3{% endblock %}
+{% block title %}Page 3: {% endblock %}
 
 {% block content %}
-  <h1>Now I know:</h1>
+  <h1>Page 3: What is 5 raised to the 3rd power, (5^3) </h1>
 
-<ul>
- <li> Your first name is: {{ session['firstName'] }}</li>
- <li> Your last name is: {{ session['lastName'] }} </li>
- <li> Your favorite color is: {{ session['favoriteColor'] }} </li>
-</ul>
+ <form action={{ url_for("renderPage3") }} method="POST">
+  <input type="text" name="third">
+  <input type="submit" value="Submit">
+ </form> 
 
 
 
