@@ -1,18 +1,16 @@
 {% extends "layout.html" %}
 
-{% block title %}Page 1: Name{% endblock %}
+{% block title %}Page 4: {% endblock %}
 
 {% block content %}
-  <h1>Page 1: What is your name?</h1>
+  <h1>Page 4: What is what is c=3^2 + 4^2, (a^2 + b^2 = c^2)</h1>
 
- <form action={{ url_for("renderPage2") }} method="POST">
-  First name:<br>
-  <input type="text" name="firstName">
-  <br>
-  Last name:<br>
-  <input type="text" name="lastName">
+ <form action={{ url_for("renderPage3") }} method="POST">
+  Favorite Color:<br>
+  <input type="text" name="second">
   <input type="submit" value="Submit">
  </form> 
+
 
 
 {% endblock %}
