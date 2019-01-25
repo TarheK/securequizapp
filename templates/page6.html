@@ -1,14 +1,16 @@
 {% extends "layout.html" %}
 
-{% block title %}Page 3{% endblock %}
+{% block title %}Page 6{% endblock %}
 
 {% block content %}
   <h1>Now I know:</h1>
 
 <ul>
- <li> Your first name is: {{ session['firstName'] }}</li>
- <li> Your last name is: {{ session['lastName'] }} </li>
- <li> Your favorite color is: {{ session['favoriteColor'] }} </li>
+ <li> Your answer is : {{ session['first'] }}</li>
+ <li> Your answer is: {{ session['second'] }} </li>
+ <li> Your answer is: {{ session['third'] }} </li>
+ <li> Your answer is: {{ session['fourth'] }}</li>
+ <li> Your answer is: {{ session['fifth'] }}</li>
 </ul>
 
 
