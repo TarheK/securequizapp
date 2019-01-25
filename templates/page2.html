@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 
-{% block title %}Page 2: Ask for your favorite color{% endblock %}
+{% block title %}Page 2: {% endblock %}
 
 {% block content %}
-  <h1>Page 2: Ask for favorite color</h1>
+  <h1>Page 2: What is 9 multiplied by 7</h1>
 
  <form action={{ url_for("renderPage3") }} method="POST">
   Favorite Color:<br>
-  <input type="text" name="favoriteColor">
+  <input type="text" name="second">
   <input type="submit" value="Submit">
  </form> 
 
