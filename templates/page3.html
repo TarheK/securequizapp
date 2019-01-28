@@ -5,7 +5,8 @@
 {% block content %}
   <h1>Page 3: What is 5 raised to the 3rd power, (5^3) </h1>
 
- <form action={{ url_for("renderPage4") }} method="POST">
+<form action={{ url_for("renderPage4") }} method="POST">
+  Response:<br>
   <input type="text" name="third">
   <input type="submit" value="Submit">
  </form> 
