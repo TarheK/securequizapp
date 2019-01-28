@@ -57,4 +57,4 @@ def renderPage6():
      return render_template('page6.html')
   
 if __name__=="__main__":
-    app.run(debug=False)
+    app.run(debug=True)
