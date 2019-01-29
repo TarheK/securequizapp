@@ -30,31 +30,50 @@ def renderPage1():
 def renderPage2():
     #TODO: set the first and last name in the session
     session["first"] = request.form["first"] #adds the first name to the cookie
-    return render_template('page2.html')
+    if session["second"] = request.form["second"] not in cookie 
+      return render_template('page2.html')
+    else 
+       session.clear()
+       return redirect(url_for('renderMain'))
 
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
     #TODO: set the favorite color in the session
      session["second"] = request.form["second"] #adds the favorite color to the cookie
-     return render_template('page3.html')
+     if session["third"] = request.form["third"] not in cookie 
+      return render_template('page3.html')
+      else 
+        session.clear()
+        return redirect(url_for('renderMain'))
+
   
 @app.route('/page4',methods=['GET','POST'])
 def renderPage4():
     #TODO: set the favorite color in the session
      session["third"] = request.form["third"] #adds the favorite color to the cookie
-     return render_template('page4.html')
+      if session["fourth"] = request.form["fourth"] not in cookie 
+      return render_template('page4.html')
+    else 
+       session.clear()
+       return redirect(url_for('renderMain'))
+
   
 @app.route('/page5',methods=['GET','POST'])
 def renderPage5():
     #TODO: set the favorite color in the session
      session["fourth"] = request.form["fourth"] #adds the favorite color to the cookie
-     return render_template('page5.html')
+      if session["fifth"] = request.form["fifth"] not in cookie 
+      return render_template('page5.html')
+    else 
+       session.clear()
+       return redirect(url_for('renderMain'))
+
   
 @app.route('/page6',methods=['GET','POST'])
 def renderPage6():
     #TODO: set the favorite color in the session
      session["fifth"] = request.form["fifth"] #adds the favorite color to the cookie
      return render_template('page6.html')
-  
+
 if __name__=="__main__":
     app.run(debug=True)
