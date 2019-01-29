@@ -30,7 +30,7 @@ def renderPage1():
 def renderPage2():
     #TODO: set the first and last name in the session
     session["first"] = request.form["first"] #adds the first name to the cookie
-    if session["second"] = request.form["second"] and not in cookie 
+    if session["second"] == request.form["second"] and not in cookie 
       return render_template('page2.html')
     else 
        session.clear()
