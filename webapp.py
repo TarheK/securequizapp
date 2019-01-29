@@ -32,7 +32,7 @@ def renderPage2():
     session["first"] = request.form["first"] #adds the first name to the cookie
     if session["second"] == request.form["second"] and sessiom ["second"] not in session:
       return render_template('page2.html')
-    else 
+    else: 
        session.clear()
        return redirect(url_for('renderMain'))
 
@@ -42,7 +42,7 @@ def renderPage3():
      session["second"] = request.form["second"] #adds the favorite color to the cookie
      if session["third"] == request.form["third"] and session["third"] not in session :
       return render_template('page3.html')
-      else 
+      else:
         session.clear()
         return redirect(url_for('renderMain'))
 
@@ -53,7 +53,7 @@ def renderPage4():
      session["third"] = request.form["third"] #adds the favorite color to the cookie
       if session["fourth"] == request.form["fourth"] and session["fourth"] not in session :
       return render_template('page4.html')
-    else 
+    else:
        session.clear()
        return redirect(url_for('renderMain'))
 
@@ -64,7 +64,7 @@ def renderPage5():
      session["fourth"] = request.form["fourth"] #adds the favorite color to the cookie
       if session["fifth"] == request.form["fifth"] and session["fifth"] not in session:
       return render_template('page5.html')
-    else 
+    else:
        session.clear()
        return redirect(url_for('renderMain'))
 
