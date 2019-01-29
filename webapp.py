@@ -30,7 +30,7 @@ def renderPage1():
 def renderPage2():
     #TODO: set the first and last name in the session
     session["first"] = request.form["first"] #adds the first name to the cookie
-    if session["second"] == request.form["second"] and sessiom ["second"] not in session 
+    if session["second"] == request.form["second"] and sessiom ["second"] not in session:
       return render_template('page2.html')
     else 
        session.clear()
@@ -40,7 +40,7 @@ def renderPage2():
 def renderPage3():
     #TODO: set the favorite color in the session
      session["second"] = request.form["second"] #adds the favorite color to the cookie
-     if session["third"] == request.form["third"] and session["third"] not in session 
+     if session["third"] == request.form["third"] and session["third"] not in session :
       return render_template('page3.html')
       else 
         session.clear()
@@ -51,7 +51,7 @@ def renderPage3():
 def renderPage4():
     #TODO: set the favorite color in the session
      session["third"] = request.form["third"] #adds the favorite color to the cookie
-      if session["fourth"] == request.form["fourth"] and session["fourth"] not in session 
+      if session["fourth"] == request.form["fourth"] and session["fourth"] not in session :
       return render_template('page4.html')
     else 
        session.clear()
@@ -62,7 +62,7 @@ def renderPage4():
 def renderPage5():
     #TODO: set the favorite color in the session
      session["fourth"] = request.form["fourth"] #adds the favorite color to the cookie
-      if session["fifth"] == request.form["fifth"] and session["fifth"] not in session
+      if session["fifth"] == request.form["fifth"] and session["fifth"] not in session:
       return render_template('page5.html')
     else 
        session.clear()
