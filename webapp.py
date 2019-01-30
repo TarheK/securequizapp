@@ -73,6 +73,19 @@ def renderPage5():
 def renderPage6():
     #TODO: set the favorite color in the session
      session["fifth"] = request.form["fifth"] #adds the favorite color to the cookie
+     score=0; 
+    if session["first"]=2:
+      score=score+1
+    else:
+      score=score+0
+    if session["second"]=63:
+      score=score+1
+    else:
+      score=score+0
+    if session["third"]=5:
+      score=score+1
+    else:
+      score=score+0
      return render_template('page6.html')
 
 if __name__=="__main__":
