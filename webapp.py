@@ -41,12 +41,14 @@ def renderPage2():
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
     #TODO: set the favorite color in the session
-     session["second"] = request.form["second"] #adds the favorite color to the cookie
-     if session["third"] == request.form["third"] and session["third"] not in session :
-        return render_template('page3.html')
-     else:
-        session.clear()
-        return redirect(url_for('renderMain'))
+     if "second" in request.form:
+      session["first"] = request.form["second"]
+    if "second" not in session:
+      session.clear()
+      return redirect(url_for('renderMain'))
+
+    return render_template('page3.html')
+       
 
   
 @app.route('/page4',methods=['GET','POST'])
