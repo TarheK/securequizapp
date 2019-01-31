@@ -35,7 +35,6 @@ def renderPage2():
       session.clear()
       return redirect(url_for('renderMain'))
 
-    if session["second"] == request.form["second"]
     return render_template('page2.html')
        
 
