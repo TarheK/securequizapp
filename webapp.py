@@ -28,7 +28,7 @@ def renderPage1():
 
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
-    #TODO: set the first and last name in the session
+    #make sure they sent you data for "first"
     if "first" in request.form:
       session["first"] = request.form["first"]
     if "first" not in session:
@@ -75,7 +75,7 @@ def renderPage5():
 def renderPage6():
     #TODO: set the favorite color in the session
      session["fifth"] = request.form["fifth"] #adds the favorite color to the cookie
-     score=0; 
+     score=0
      if session["first"]==2:
       score=score+1
      else:
