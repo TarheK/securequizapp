@@ -42,7 +42,7 @@ def renderPage2():
 def renderPage3():
     #TODO: set the favorite color in the session
      if "second" in request.form:
-      session["first"] = request.form["second"]
+      session["second"] = request.form["second"]
     if "second" not in session:
       session.clear()
       return redirect(url_for('renderMain'))
