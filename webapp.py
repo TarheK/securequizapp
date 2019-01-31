@@ -29,12 +29,15 @@ def renderPage1():
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
     #TODO: set the first and last name in the session
-    session["first"] = request.form["first"] #adds the first name to the cookie
-    if session["second"] == request.form["second"] and sessiom ["second"] not in session:
-      return render_template('page2.html')
-    else: 
-       session.clear()
-       return redirect(url_for('renderMain'))
+    if "first" in request.form:
+      session["first"] = request.form["first"]
+    if "first" not in session:
+      session.clear()
+      return redirect(url_for('renderMain'))
+
+    if session["second"] == request.form["second"]
+    return render_template('page2.html')
+       
 
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
@@ -51,7 +54,7 @@ def renderPage3():
 def renderPage4():
     #TODO: set the favorite color in the session
     session["third"] = request.form["third"] #adds the favorite color to the cookie
-    if session["fourth"] == request.form["fourth"] and session["fourth"] not in session :
+    if session["fourth"] == request.form["fourth"] and "fourth" not in session :
        return render_template('page4.html')
     else:
        session.clear()
