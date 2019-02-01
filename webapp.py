@@ -80,7 +80,7 @@ def renderPage5():
 def renderPage6():
     #TODO: set the favorite color in the session
     if "fifth" in request.form:
-      session["fifth"] = request.form["fifth"]
+     session["fifth"] = request.form["fifth"]
     if "fifth" not in session:
       session.clear()
       return redirect(url_for('renderMain'))
