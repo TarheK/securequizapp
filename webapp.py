@@ -98,7 +98,8 @@ def renderPage6():
       score=score+1
      else:
       score=score+0
-     print(score);
+     print("hi")
+     print(score)
      return score
      return render_template('page6.html')
     
