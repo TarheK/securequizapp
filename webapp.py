@@ -51,18 +51,14 @@ def renderPage3():
   
 @app.route('/page4',methods=['GET','POST'])
 def renderPage4():
-    #TODO: set the favorite color in the session
-    #adds the favorite color to the cookie session["third"] = request.form["third"]
-    if "third" in request.form:
-      session["third"] = request.form["third"]
-    if "third" not in session:
+     if "third" in session:
       session.clear()
       return redirect(url_for('renderMain'))
-
-    return render_template('page4.html')
+     if "third" in request.form:
+      session["third"] = request.form["third"]
+     return render_template('page4.html')
        
 
-  
 @app.route('/page5',methods=['GET','POST'])
 def renderPage5():
     #TODO: set the favorite color in the session
@@ -101,7 +97,7 @@ def renderPage6():
       score=score+1
     else:
       score=score+0
-    if session["fifth"]=="c":
+    if session["fifth"]=="4":
       score=score+1
     else:
       score=score+0
