@@ -80,33 +80,33 @@ def renderPage5():
 def renderPage6():
     #TODO: set the favorite color in the session
     if "fifth" in request.form:
-     session["fifth"] = request.form["fifth"]
+      session["fifth"] = request.form["fifth"]
     if "fifth" not in session:
       session.clear()
       return redirect(url_for('renderMain'))
-     score==0
-     if session["first"]==2:
+    score=0
+    if session["first"]==2:
       score=score+1
-     else:
+    else:
       score=score+0
-     if session["second"]==63:
+    if session["second"]==63:
       score=score+1
-     else:
+    else:
       score=score+0
-     if session["third"]==125:
+    if session["third"]==125:
       score=score+1
-     else:
+    else:
       score=score+0
-     if session["forth"]==5:
+    if session["forth"]==5:
       score=score+1
-     else:
+    else:
       score=score+0
-     if session["fifth"]=="c":
+    if session["fifth"]=="c":
       score=score+1
-     else:
+    else:
       score=score+0
-     print(score);
-     return render_template('page6.html')
+    print(score);
+    return render_template('page6.html')
 
 if __name__=="__main__":
     app.run(debug=True)
