@@ -71,13 +71,12 @@ def renderPage5():
   
 @app.route('/page6',methods=['GET','POST'])
 def renderPage6():
-    #TODO: set the favorite color in the session
-    if "fifth" in request.form:
-      session["fifth"] = request.form["fifth"]
-      print("hi")
-    if "fifth" not in session:
+     if "fifth" in session:
       session.clear()
       return redirect(url_for('renderMain'))
+     if "fifth" in request.form:
+      session["fifth"] = request.form["fifth"]
+     return render_template('page6.html')
     score=0
     if session["first"]==2:
       score=score+1
