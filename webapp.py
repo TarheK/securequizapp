@@ -40,12 +40,12 @@ def renderPage2():
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
     #TODO: set the favorite color in the session
-     if "first" in session:
+     if "second" in session:
       session.clear()
       return redirect(url_for('renderMain'))
-     if "first" in request.form:
-      session["first"] = request.form["first"]
-     return render_template('page2.html')
+     if "second" in request.form:
+      session["second"] = request.form["second"]
+     return render_template('page3.html')
        
 
   
