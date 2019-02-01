@@ -61,14 +61,12 @@ def renderPage4():
 
 @app.route('/page5',methods=['GET','POST'])
 def renderPage5():
-    #TODO: set the favorite color in the session
-    if "fourth" in request.form:
-      session["fourth"] = request.form["fourth"]
-    if "fourth" not in session:
+     if "fourth" in session:
       session.clear()
       return redirect(url_for('renderMain'))
-
-    return render_template('page5.html')
+     if "fourth" in request.form:
+      session["fourth"] = request.form["fourth"]
+     return render_template('page5.html')
        
   
 @app.route('/page6',methods=['GET','POST'])
@@ -103,6 +101,7 @@ def renderPage6():
       score=score+0
     print(score);
     return render_template('page6.html')
+    return score
 
 if __name__=="__main__":
     app.run(debug=True)
