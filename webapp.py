@@ -29,11 +29,11 @@ def renderPage1():
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
     #make sure they sent you data for "first"
-    if "first" in request.form:
-      session["first"] = request.form["first"]
-    if "first" not in session:
+     if "first" in session:
       session.clear()
       return redirect(url_for('renderMain'))
+    if "first" in request.form:
+      session["first"] = request.form["first"]
     return render_template('page2.html')
        
 
