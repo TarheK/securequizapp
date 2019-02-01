@@ -98,7 +98,7 @@ def renderPage6():
       score=score+1
     else:
       score=score+0
-    if session["forth"]==5:
+    if session["fourth"]==5:
       score=score+1
     else:
       score=score+0
