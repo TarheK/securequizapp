@@ -77,30 +77,31 @@ def renderPage6():
      if "fifth" in request.form:
       session["fifth"] = request.form["fifth"]
      return render_template('page6.html')
-    score=0
-    if session["first"]==2:
+     score=0
+     if session["first"]==2:
       score=score+1
-    else:
+     else:
       score=score+0
-    if session["second"]==63:
+     if session["second"]==63:
       score=score+1
-    else:
+     else:
       score=score+0
-    if session["third"]==125:
+     if session["third"]==125:
       score=score+1
-    else:
+     else:
       score=score+0
-    if session["fourth"]==5:
+     if session["fourth"]==5:
       score=score+1
-    else:
+     else:
       score=score+0
-    if session["fifth"]=="4":
+     if session["fifth"]=="4":
       score=score+1
-    else:
+     else:
       score=score+0
-    print(score);
-    return render_template('page6.html')
-    return score
+     print(score);
+     return score
+     return render_template('page6.html')
+    
 
 if __name__=="__main__":
     app.run(debug=True)
