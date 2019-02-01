@@ -100,7 +100,7 @@ def renderPage6():
       score=score+0
      print("hi")
      print(score)
-     return score
+     return (score)
      return render_template('page6.html')
     
 
