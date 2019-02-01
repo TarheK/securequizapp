@@ -34,7 +34,6 @@ def renderPage2():
     if "first" not in session:
       session.clear()
       return redirect(url_for('renderMain'))
-
     return render_template('page2.html')
        
 
