@@ -41,7 +41,7 @@ def renderPage2():
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
     #TODO: set the favorite color in the session
-     if "second" in request.form:
+    if "second" in request.form:
       session["second"] = request.form["second"]
     if "second" not in session:
       session.clear()
@@ -54,29 +54,38 @@ def renderPage3():
 @app.route('/page4',methods=['GET','POST'])
 def renderPage4():
     #TODO: set the favorite color in the session
-    session["third"] = request.form["third"] #adds the favorite color to the cookie
-    if session["fourth"] == request.form["fourth"] and "fourth" not in session :
-       return render_template('page4.html')
-    else:
-       session.clear()
-       return redirect(url_for('renderMain'))
+    #adds the favorite color to the cookie session["third"] = request.form["third"]
+    if "third" in request.form:
+      session["third"] = request.form["third"]
+    if "third" not in session:
+      session.clear()
+      return redirect(url_for('renderMain'))
+
+    return render_template('page4.html')
+       
 
   
 @app.route('/page5',methods=['GET','POST'])
 def renderPage5():
     #TODO: set the favorite color in the session
-    session["fourth"] = request.form["fourth"] #adds the favorite color to the cookie
-    if session["fifth"] == request.form["fifth"] and session["fifth"] not in session:
-       return render_template('page5.html')
-    else:
-       session.clear()
-       return redirect(url_for('renderMain'))
+    if "fourth" in request.form:
+      session["fourth"] = request.form["fourth"]
+    if "fourth" not in session:
+      session.clear()
+      return redirect(url_for('renderMain'))
 
+    return render_template('page5.html')
+       
   
 @app.route('/page6',methods=['GET','POST'])
 def renderPage6():
     #TODO: set the favorite color in the session
-     session["fifth"] = request.form["fifth"] #adds the favorite color to the cookie
+    if "fifth" in request.form:
+      session["fifth"] = request.form["fifth"]
+    if "fifth" not in session:
+      session.clear()
+      return redirect(url_for('renderMain'))
+     
      score=0
      if session["first"]==2:
       score=score+1
