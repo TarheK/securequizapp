@@ -84,7 +84,6 @@ def renderPage6():
     if "fifth" not in session:
       session.clear()
       return redirect(url_for('renderMain'))
-     
      score=0
      if session["first"]==2:
       score=score+1
