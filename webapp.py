@@ -32,9 +32,9 @@ def renderPage2():
      if "first" in session:
       session.clear()
       return redirect(url_for('renderMain'))
-    if "first" in request.form:
+     if "first" in request.form:
       session["first"] = request.form["first"]
-    return render_template('page2.html')
+     return render_template('page2.html')
        
 
 @app.route('/page3',methods=['GET','POST'])
